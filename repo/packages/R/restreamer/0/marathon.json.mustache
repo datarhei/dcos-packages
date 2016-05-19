@@ -1,0 +1,28 @@
+{
+  "id": "/{{service.name}}",
+  "instances": {{service.instances}},
+  "cpus": {{service.cpus}},
+  "mem": {{service.mem}},
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "{{resource.assets.container.docker.restreamer}}",
+    {{#service.bridge}}
+      "network": "BRIDGE",    
+      "portMappings": [
+        { "containerPort": 1935, "hostPort": 0 },
+        { "containerPort": 8080, "hostPort": 0 }
+      ]
+    {{/service.bridge}}
+    {{^service.bridge}}
+      "network": "HOST"
+    {{/service.bridge}}
+    }
+  },
+  "acceptedResourceRoles": [
+    "{{service.role}}"
+  ],
+  "labels": {
+    "DCOS_SERVICE_NAME": "{{service.name}}"
+  }
+}
