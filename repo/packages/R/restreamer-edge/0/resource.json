@@ -1,0 +1,14 @@
+{
+  "images": {
+    "icon-small": "https://datarhei.org/dr_icon_large.png",
+    "icon-medium": "https://datarhei.org/dr_icon_large.png",
+    "icon-large": "https://datarhei.org/dr_icon_large.png"
+  },
+  "assets": {
+    "container": {
+      "docker": {
+        "nginx-docker": "datarhei/restreamer:0.1.0-rc.7.1"
+      }
+    }
+  }
+}

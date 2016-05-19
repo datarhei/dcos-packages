@@ -1,0 +1,81 @@
+{
+  "id": "/{{service.name}}",
+  "instances": {{service.instances}},
+  "cpus": {{service.cpus}},
+  "mem": {{service.mem}},
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "{{resource.assets.container.docker.restreamer-edge}}",
+    {{#service.bridge}}
+      "network": "BRIDGE",    
+      "portMappings": [
+        { "containerPort": {{http.port}}, "hostPort": 0 }
+        ,{ "containerPort": {{rtmp.port}}, "hostPort": 0 }
+      {{#https.enable}}
+        ,{ "containerPort": {{https.port}}, "hostPort": 0 }
+      {{/https.enable}}
+      ]
+    {{/service.bridge}}
+    {{^service.bridge}}
+      "network": "HOST"
+    {{/service.bridge}}
+    }
+  },
+  "env": [
+    "WORKER_PROCESSES": "{{general.worker_processes}}",
+    "WORKER_CONNECTIONS": "{{general.worker_connections}}",
+    "RTMP_ACCESS_LOG": "{{rtmp.access_log}}",
+    "RTMP_SRV_PORT": "{{rtmp.port}}",
+    "RTMP_SRV_TIMEOUT": "{{rtmp.timeout}}",
+    "RTMP_SRV_PING": "{{rtmp.ping}}",
+    "RTMP_SRV_PING_TIMEOUT": "{{rtmp.ping_timeout}}",
+    "RTMP_SRV_MAX_STREAMS": "{{rtmp.max_streams}}",
+    "RTMP_SRV_ACK_WINDOW": "{{rtmp.ack_window}}",
+    "RTMP_SRV_CHUNK_SIZE": "{{rtmp.chunk_size}}",
+    "RTMP_SRV_MAX_MESSAGE": "{{rtmp.max_message}}",
+    "RTMP_SRV_BUFLEN": {{rtmp.buflen}}",
+    "RTMP_SRV_APP_HLS_INTERLEAVE": "{{hls.interleave}}",
+    "RTMP_SRV_APP_HLS_META": "{{hls.meta}}",
+    "RTMP_SRV_APP_HLS_WAIT_KEY": "{{hls.wait_key}}",
+    "RTMP_SRV_APP_HLS_WAIT_VIDEO": "{{hls.wait_video}}",
+    "RTMP_SRV_APP_HLS_DROP_IDLE_PUBLISHER": "{{hls.drop_idle_publisher}}",
+    "RTMP_SRV_APP_HLS_SYNC": "{{hls.sync}}",
+    "RTMP_SRV_APP_HLS_IDLE_STREAMS": "{{hls.idle_streams}}",
+    "RTMP_SRV_APP_HLS_HLS_FRAGMENT": "{{hls.hls_fragment}}",
+    "RTMP_SRV_APP_HLS_HLS_PLAYLIST_LENGTH": "{{hls.hls_playlist_lenght}}",
+    "RTMP_SRV_APP_HLS_HLS_SYNC": "{{hls.hls_sync}}",
+    "RTMP_SRV_APP_HLS_HLS_CONTINOUS": "{{hls.hls_continous}}",
+    "RTMP_SRV_APP_HLS_HLS_NESTED": "{{hls.hls_nested}}",
+    "RTMP_SRV_APP_HLS_HLS_CLEANUP": "{{hls.hls_cleanup}}",
+    "RTMP_SRV_APP_HLS_HLS_FRAGMENT_NAMING": "{{hls.hls_fragment_naming}}",
+    "RTMP_SRV_APP_HLS_HLS_FRAGMENT_NAMING_GRANULARITY": "{{hls.hls_fragment_naming_granularity}}",
+    "RTMP_SRV_APP_HLS_HLS_FRAGMENT_SLICING": "{{hls.hls_fragment_slicing}}",
+    "RTMP_SRV_APP_HLS_HLS_TYPE": "{{hls.hls_type}}",
+    "RTMP_SRV_APP_HLS_HLS_KEY": "{{hls.hls_key}}",
+    "RTMP_SRV_APP_HLS_HLS_FRAGMENTS_PER_KEY": "{{hls.hls_fragments_per_key}}",
+    "RTMP_SRV_APP_HLS_SNAPSHOT_INTERVAL": "{{encoding.snapshot_interval}}",
+    "RTMP_SRV_APP_HLS_TRANSCODING": "{{encoding.bitrates.enable}}",
+    "RTMP_SRV_APP_HLS_TRANSCODING_PROFILES": "{{encoding.bitrates.profiles}}",
+    "RTMP_PUBLISH_TOKEN": "{{rtmp.publish_token}}",
+    "HTTP_SENDFILE": "{{http.sendfile}}",
+    "HTTP_TCP_NOPUSH": "{{http.tcp_nopush}}",
+    "HTTP_TCP_NODELAY": "{{http.tcp_nodelay}}",
+    "HTTP_ACCESS_LOG": "{{http.access_log}}",
+    "HTTP_SRV_PORT": "{{http.port}}",
+    "HTTP_SRV_LOC_HLS_ACCESS_CONTROL_ALLOW_ORIGIN": "{{http.access_control_allow_origin}}",
+    "HTTP_AUTH_USERNAME": "{{http.auth_username}}",
+    "HTTP_AUTH_PASSWORD": "{{http.auth_password}}",
+    "HTTPS_SRV": "{{https.enable}}",
+    "HTTPS_SRV_PORT": "{{https.port}}",
+    "HTTPS_CERT_CREATE": "{{https.cert_create}}",
+    "HTTPS_CERT_MAIL": "{{https.cert_email}}",
+    "HTTPS_CERT_DOMAIN": "{{https.cert_domain}}"
+  ],
+  "acceptedResourceRoles": [
+    "{{service.role}}"
+  ],
+  "labels": {
+    "DCOS_SERVICE_NAME": "{{service.name}}"
+  }
+}

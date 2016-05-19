@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "properties": {
     "service": {
+      "type": "object",
       "properties": {
         "name": {
           "description": "Name for this Restreamer application",
@@ -49,8 +50,33 @@
           "default": false
         }
       },
-      "required": ["name", "instances", "cpus", "mem"],
-      "type": "object"
+      "required": ["name", "instances", "cpus", "mem"]
+    },
+    "restreamer": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "description": "Username",
+          "type": "string",
+          "default": "admin"
+        },
+        "password": {
+          "description": "Password",
+          "type": "string",
+          "default": "datarhei"
+        },
+        "logger_level": {
+          "description": "Logger Level",
+          "type": "integer",
+          "default": 3
+        },
+        "snapshot_refresh_interval": {
+          "description": "Interval to create a new Snapshot (in seconds)",
+          "type": "integer",
+          "default": 60
+        }
+      },
+      "required": ["username", "password", "logger_level", "snapshot_refresh_interval"]
     }
   },
   "type": "object"
