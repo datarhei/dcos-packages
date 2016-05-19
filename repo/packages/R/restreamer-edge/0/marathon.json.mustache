@@ -22,7 +22,7 @@
     {{/service.bridge}}
     }
   },
-  "env": [
+  "env": {
     "WORKER_PROCESSES": "{{general.worker_processes}}",
     "WORKER_CONNECTIONS": "{{general.worker_connections}}",
     "RTMP_ACCESS_LOG": "{{rtmp.access_log}}",
@@ -71,7 +71,7 @@
     "HTTPS_CERT_CREATE": "{{https.cert_create}}",
     "HTTPS_CERT_MAIL": "{{https.cert_email}}",
     "HTTPS_CERT_DOMAIN": "{{https.cert_domain}}"
-  ],
+  },
   "acceptedResourceRoles": [
     "{{service.role}}"
   ],
