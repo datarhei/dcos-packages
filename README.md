@@ -11,3 +11,4 @@ dcos package repo add universe-datarhei https://github.com/datarhei/dcos-package
 ## Packages:
 
 * Restreamer (in progress)
+* Restreamer-Edge (in progress)
