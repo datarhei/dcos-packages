@@ -7,7 +7,7 @@
   "assets": {
     "container": {
       "docker": {
-        "nginx-docker": "datarhei/restreamer:0.1.0-rc.7.1"
+        "restreamer-edge": "datarhei/restreamer-edge:0.1.0-rc.3"
       }
     }
   }

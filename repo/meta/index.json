@@ -16,18 +16,18 @@
       }
     },
     {
-      "currentVersion":"0.1.0-rc.7.1",
-      "description":"Restreamer offers smart free video streaming in real time. Stream H.264 video of IP cameras live to your website. Upload your live video on YouTube-Live, Ustream, Twitch, Livestream.com or any other streaming solutions e.g. Wowza-Streaming-Engine.",
+      "currentVersion":"0.1.0-rc.3",
+      "description":"This is an stable working concept to create a streaming service in front of the Datarhei/Restreamer. The Restreamer-Edge is very plain and bash based application without user-interface and administration. It's an experiment to learn more about this setup of applications.",
       "framework":false,
-      "name":"restreamer",
+      "name":"restreamer-edge",
       "selected":false,
       "tags":[
         "video",
         "streaming",
-        "origin"
+        "edge"
       ],
       "versions":{
-        "0.1.0-rc.7.1":"0"
+        "0.1.0-rc.3":"0"
       }
     }
   ],
