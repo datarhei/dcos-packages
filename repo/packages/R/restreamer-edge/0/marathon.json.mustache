@@ -56,7 +56,7 @@
     "RTMP_SRV_APP_HLS_HLS_FRAGMENTS_PER_KEY": "{{hls.hls_fragments_per_key}}",
     "RTMP_SRV_APP_HLS_SNAPSHOT_INTERVAL": "{{encoding.snapshot_interval}}",
     "RTMP_SRV_APP_HLS_TRANSCODING": "{{encoding.bitrates.enable}}",
-    "RTMP_SRV_APP_HLS_TRANSCODING_PROFILES": "{{encoding.bitrates.profiles}}",
+    "RTMP_SRV_APP_HLS_TRANSCODING_PROFILES": "{{#encoding.bitrates.240p}}240p,{{/encoding.bitrates.240p}}{{#encoding.bitrates.360p}}360p,{{/encoding.bitrates.360p}}{{#encoding.bitrates.480p}}480p,{{/encoding.bitrates.480p}}{{#encoding.bitrates.720p}}720p,{{/encoding.bitrates.720p}}native",
     "RTMP_PUBLISH_TOKEN": "{{rtmp.publish_token}}",
     "HTTP_SENDFILE": "{{http.sendfile}}",
     "HTTP_TCP_NOPUSH": "{{http.tcp_nopush}}",

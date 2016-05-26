@@ -237,10 +237,25 @@
               "type": "boolean",
               "default": false
             },
-            "profiles": {
+            "240p":
               "description": "",
-              "type": "string",
-              "default": "240p,360p,480p,720p,native"
+              "type": "boolean",
+              "default": true
+            },
+            "360p":
+              "description": "",
+              "type": "boolean",
+              "default": true
+            },
+            "480p":
+              "description": "",
+              "type": "boolean",
+              "default": true
+            },
+            "720p":
+              "description": "",
+              "type": "boolean",
+              "default": true
             }
           }
         }
