@@ -237,22 +237,22 @@
               "type": "boolean",
               "default": false
             },
-            "240p":
+            "240p": {
               "description": "",
               "type": "boolean",
               "default": true
             },
-            "360p":
+            "360p": {
               "description": "",
               "type": "boolean",
               "default": true
             },
-            "480p":
+            "480p": {
               "description": "",
               "type": "boolean",
               "default": true
             },
-            "720p":
+            "720p": {
               "description": "",
               "type": "boolean",
               "default": true
