@@ -12,13 +12,12 @@
         "cpus": {
           "description": "CPU shares to allocate to each Restreamer instance.",
           "type": "number",
-          "default": 1,
-          "minimum": 1
+          "default": 0.1
         },
         "mem": {
           "description": "Memory (MB) to allocate to each Restreamer task.",
           "type": "number",
-          "default": 1024.0,
+          "default": 256.0,
           "minimum": 256.0
         },
         "role": {
