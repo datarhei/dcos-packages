@@ -1,0 +1,29 @@
+{
+  "id": "/datarhei/dispatcher",
+  "instances": {{service.instances}},
+  "cpus": {{service.cpus}},
+  "mem": {{service.mem}},
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "datarhei/clab-dispatcher:latest",
+      "forcePullImage": true,
+      "network": "BRIDGE",    
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 0,
+          "protocol": "tcp",
+          "name": "http",
+          "labels": {}
+        }
+      ],
+    }
+  },
+  "acceptedResourceRoles": [
+    "{{service.role}}"
+  ],
+  "labels": {
+    "DCOS_SERVICE_NAME": "datarhei-clusterlab"
+  }
+}

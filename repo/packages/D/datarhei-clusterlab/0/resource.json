@@ -1,0 +1,14 @@
+{
+  "images": {
+    "icon-small": "https://datarhei.org/dr_icon_large.png",
+    "icon-medium": "https://datarhei.org/dr_icon_large.png",
+    "icon-large": "https://datarhei.org/dr_icon_large.png"
+  },
+  "assets": {
+    "container": {
+      "docker": {
+        "restreamer-edge": "datarhei/clab-dispatcher:latest"
+      }
+    }
+  }
+}

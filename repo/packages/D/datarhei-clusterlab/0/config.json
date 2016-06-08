@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "properties": {
+    "service": {
+      "properties": {
+        "instances": {
+          "description": "Number of instances to run.",
+          "type": "integer",
+          "default": 1,
+          "minimum": 1
+        },
+        "cpus": {
+          "description": "CPU shares to allocate to each Restreamer instance.",
+          "type": "number",
+          "default": 1,
+          "minimum": 1
+        },
+        "mem": {
+          "description": "Memory (MB) to allocate to each Restreamer task.",
+          "type": "number",
+          "default": 1024.0,
+          "minimum": 256.0
+        },
+        "role": {
+          "description": "Deploy Restreamer only on nodes with this role.",
+          "type": "string",
+          "default": "*"
+        }
+      },
+      "required": ["instances"],
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

@@ -1,6 +1,21 @@
 {
   "packages":[
     {
+      "currentVersion":"0.2",
+      "description":"Bla",
+      "framework":false,
+      "name":"datarhei-clusterlab",
+      "selected":false,
+      "tags":[
+        "video",
+        "streaming",
+        "cluster"
+      ],
+      "versions":{
+        "0.2":"0"
+      }
+    },
+    {
       "currentVersion":"0.1.0-rc.7.1",
       "description":"Restreamer offers smart free video streaming in real time. Stream H.264 video of IP cameras live to your website. Upload your live video on YouTube-Live, Ustream, Twitch, Livestream.com or any other streaming solutions e.g. Wowza-Streaming-Engine.",
       "framework":false,

@@ -1,0 +1,18 @@
+{
+  "packagingVersion": "2.0",
+  "name": "datarhei-clusterlab",
+  "version": "0.2",
+  "scm": "https://github.com/datarhei/clusterlab",
+  "description": "Bla",
+  "maintainer": "open@datarhei.org",
+  "tags": ["video", "streaming", "cluster"],
+  "preInstallNotes": "Preparing to install ClusterLab.",
+  "postInstallNotes": "ClusterLab has been installed.",
+  "postUninstallNotes": "ClusterLab was uninstalled successfully.",
+  "licenses": [
+    {
+      "name": "Apache v2",
+      "url": "https://github.com/datarhei/clusterlab/blob/master/LICENSE"
+    }
+  ]
+}
