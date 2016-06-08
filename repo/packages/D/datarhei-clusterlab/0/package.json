@@ -1,6 +1,6 @@
 {
   "packagingVersion": "2.0",
-  "name": "datarhei-clusterlab",
+  "name": "/datarhei/dispatcher",
   "version": "0.2",
   "scm": "https://github.com/datarhei/clusterlab",
   "description": "Bla",

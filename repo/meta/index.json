@@ -4,7 +4,7 @@
       "currentVersion":"0.2",
       "description":"Bla",
       "framework":false,
-      "name":"datarhei-clusterlab",
+      "name":"/datarhei/dispatcher",
       "selected":false,
       "tags":[
         "video",
