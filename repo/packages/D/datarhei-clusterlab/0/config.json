@@ -17,8 +17,8 @@
         "mem": {
           "description": "Memory (MB) to allocate to each Restreamer task.",
           "type": "number",
-          "default": 256.0,
-          "minimum": 256.0
+          "default": 128.0,
+          "minimum": 64.0
         },
         "role": {
           "description": "Deploy Restreamer only on nodes with this role.",
@@ -27,6 +27,40 @@
         }
       },
       "required": ["instances"],
+      "type": "object"
+    },
+    "rtmp-transcoder": {
+      "properties": {
+        "cpus": {
+          "description": "CPU shares to allocate to each Restreamer instance.",
+          "type": "number",
+          "default": 0.1
+        },
+        "mem": {
+          "description": "Memory (MB) to allocate to each Restreamer task.",
+          "type": "number",
+          "default": 128.0,
+          "minimum": 64.0
+        }
+      },
+      "required": ["cpus"],
+      "type": "object"
+    },
+    "hls-origin": {
+      "properties": {
+        "cpus": {
+          "description": "CPU shares to allocate to each Restreamer instance.",
+          "type": "number",
+          "default": 0.1
+        },
+        "mem": {
+          "description": "Memory (MB) to allocate to each Restreamer task.",
+          "type": "number",
+          "default": 128.0,
+          "minimum": 64.0
+        }
+      },
+      "required": ["cpus"],
       "type": "object"
     }
   },
