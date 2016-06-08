@@ -4,7 +4,7 @@
       "currentVersion":"0.2",
       "description":"Bla",
       "framework":false,
-      "name":"/datarhei/dispatcher",
+      "name":"dispatcher",
       "selected":false,
       "tags":[
         "video",
