@@ -4,7 +4,7 @@
     "service": {
       "properties": {
         "instances": {
-          "description": "Number of instances to run.",
+          "description": "Number of dispatcher instances to run.",
           "type": "integer",
           "default": 1,
           "minimum": 1
@@ -29,15 +29,15 @@
       "required": ["instances"],
       "type": "object"
     },
-    "rtmp-transcoder": {
+    "hls-origin": {
       "properties": {
         "cpus": {
-          "description": "CPU shares to allocate to each Restreamer instance.",
+          "description": "CPU shares to allocate to each hls-origin instance.",
           "type": "number",
           "default": 0.1
         },
         "mem": {
-          "description": "Memory (MB) to allocate to each Restreamer task.",
+          "description": "Memory (MB) to allocate to each hls-origin task.",
           "type": "number",
           "default": 128.0,
           "minimum": 64.0
@@ -46,15 +46,15 @@
       "required": ["cpus"],
       "type": "object"
     },
-    "hls-origin": {
+    "rtmp-transcoder": {
       "properties": {
         "cpus": {
-          "description": "CPU shares to allocate to each Restreamer instance.",
+          "description": "CPU shares to allocate to each rtmp-transcoder instance.",
           "type": "number",
           "default": 0.1
         },
         "mem": {
-          "description": "Memory (MB) to allocate to each Restreamer task.",
+          "description": "Memory (MB) to allocate to each rtmp-transcoder task.",
           "type": "number",
           "default": 128.0,
           "minimum": 64.0
