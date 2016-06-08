@@ -3,6 +3,11 @@
   "properties": {
     "service": {
       "properties": {
+        "name": {
+          "description": "Name for this dispatcher application",
+          "type": "string",
+          "default": "dispatcher"
+        },
         "instances": {
           "description": "Number of dispatcher instances to run.",
           "type": "integer",

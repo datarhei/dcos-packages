@@ -1,5 +1,5 @@
 {
-  "id": "/datarhei/dispatcher",
+  "id": "/datarhei/{{service.name}}",
   "instances": {{service.instances}},
   "cpus": {{service.cpus}},
   "mem": {{service.mem}},
@@ -30,6 +30,6 @@
     "{{service.role}}"
   ],
   "labels": {
-    "DCOS_SERVICE_NAME": "/datarhei/dispatcher"
+    "DCOS_SERVICE_NAME": "/datarhei/{{service.name}}"
   }
 }
